@@ -1,0 +1,8 @@
+# The NRO is a release asset of the futari-nx repository; the deployment workflow downloads it.
+release/*.nro
+# made by test/release_node.mjs for local tests: made from the game, never committed
+release/*.mesp
+release/*.mesp.idx
+*.zip
+node_modules/
+__pycache__/
