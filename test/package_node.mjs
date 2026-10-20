@@ -27,6 +27,8 @@ const release = {
   nro: new Uint8Array(fs.readFileSync(path.join(root, 'release', manifest.builds[0].nro))),
   licenses: new Uint8Array(fs.readFileSync(path.join(root, 'release/LICENSES.txt'))),
   shaderCommon: new Uint8Array(fs.readFileSync(path.join(root, 'shader_common.h'))),
+  // the deko3d renderer's translator header (a build with a "deko3d" entry)
+  renutShaderCommon: new Uint8Array(fs.readFileSync(path.join(root, 'renut_shader_common.h'))),
 };
 const out = fs.openSync(output, 'w');
 const sink = { write: async (b) => { fs.writeSync(out, b); }, close: async () => fs.closeSync(out) };

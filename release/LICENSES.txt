@@ -13,7 +13,15 @@ It contains code from these projects and libraries, under their own licenses (fu
   NFSMW Recompiled, by madelrandel-blip ................................ GPL-3.0
   ReXGlue SDK, by Tom Clay, with portions from Xenia (Ben Vanik and
     the Xenia project contributors) .................................... BSD-3-Clause
-  Mesa, with the Horizon port mesa-switch by danfromtico (NVK, NAK) .... MIT
+  reNut, by reNut and masterspike52 (the Direct3D-level renderer),
+    through banjo-nx's adaptation ...................................... used with its author's permission
+  banjo-nx, by ChanseyIsTheBest (the renderer's adaptation, plume's
+    deko3d back end, the shader passes) ................................ GPL-3.0
+  plume, by renderbag and contributors ................................. MIT
+  deko3d, by fincs (devkitPro) ......................................... zlib License
+  uam, by fincs, with SwitchWakerHD's patches .......................... zlib License, MPL-2.0 (the patches)
+  Mesa (the GLSL compiler parts uam imports) ........................... MIT
+  smol-v, by Aras Pranckevicius ........................................ MIT
   FFmpeg (libavcodec, libavutil) ....................................... LGPL-2.1-or-later
   libmspack, by Stuart Caie ............................................ LGPL-2.1
   glslang .............................................................. BSD-3-Clause and others
@@ -39,11 +47,12 @@ the files changed for this port, and everything needed to rebuild futari.nro and
 those libraries, are available at https://github.com/ChanseyIsTheBest/futari-nx (see THIRD_PARTY_NOTICES.md and
 docs/building.md there). FFmpeg is https://ffmpeg.org; libmspack is https://www.cabextract.org.uk/libmspack/.
 
-The folders game_root/ and dlc/ and the files futari_shaders.mesp(.idx) are made from your own copy of the game.
-They are not covered by these licenses and must not be shared.
+The folders game_root/ and dlc/ and the files deko3d_glsl.bin and deko3d_shaders.bin (the game's shaders, made by the
+installer and by the console) are made from your own copy of the game. They are not covered by these licenses and
+must not be shared.
 
 ====================================================================================================================
-GNU General Public License, version 3 (futari-nx, sa2-nx, masseffect-nx, nfsmw-nx, NFSMW Recompiled)
+GNU General Public License, version 3 (futari-nx, sa2-nx, masseffect-nx, nfsmw-nx, NFSMW Recompiled, banjo-nx)
 ====================================================================================================================
 
                     GNU GENERAL PUBLIC LICENSE
@@ -759,10 +768,10 @@ OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ====================================================================================================================
-Mesa and mesa-switch (MIT)
+Mesa (MIT): the GLSL compiler parts uam imports
 ====================================================================================================================
 
-Copyright (C) the Mesa contributors and the mesa-switch contributors.
+Copyright (C) the Mesa contributors.
 
 Valid-License-Identifier: MIT
 SPDX-URL: https://spdx.org/licenses/MIT.html
@@ -2583,3 +2592,142 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
 COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
 OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+====================================================================================================================
+reNut (the Direct3D-level renderer)
+====================================================================================================================
+
+reNut, https://github.com/masterspike52/reNut, by reNut and masterspike52. It has no license file; its author
+permits this port to reuse it. Its adaptation (banjo-nx, by ChanseyIsTheBest) is part of futari-nx's source, under
+the GNU General Public License, version 3 above.
+
+====================================================================================================================
+plume (MIT)
+====================================================================================================================
+
+MIT License
+
+Copyright (c) 2024 renderbag and contributors
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+====================================================================================================================
+deko3d (zlib License)
+====================================================================================================================
+
+Copyright (C) 2018-2020 fincs
+
+This software is provided 'as-is', without any express or implied
+warranty.  In no event will the authors be held liable for any
+damages arising from the use of this software.
+
+Permission is granted to anyone to use this software for any
+purpose, including commercial applications, and to alter it and
+redistribute it freely, subject to the following restrictions:
+
+1. The origin of this software must not be misrepresented; you
+   must not claim that you wrote the original software. If you use
+   this software in a product, an acknowledgment in the product
+   documentation would be appreciated but is not required.
+2. Altered source versions must be plainly marked as such, and
+   must not be misrepresented as being the original software.
+3. This notice may not be removed or altered from any source
+   distribution.
+
+====================================================================================================================
+uam (zlib License for uam's own files, MIT for the Mesa files it imports)
+====================================================================================================================
+
+License for all files not included in mesa-imported/:
+
+Copyright (C) 2018-2020 fincs
+
+This software is provided 'as-is', without any express or implied
+warranty.  In no event will the authors be held liable for any
+damages arising from the use of this software.
+
+Permission is granted to anyone to use this software for any
+purpose, including commercial applications, and to alter it and
+redistribute it freely, subject to the following restrictions:
+
+1. The origin of this software must not be misrepresented; you
+   must not claim that you wrote the original software. If you use
+   this software in a product, an acknowledgment in the product
+   documentation would be appreciated but is not required.
+2. Altered source versions must be plainly marked as such, and
+   must not be misrepresented as being the original software.
+3. This notice may not be removed or altered from any source
+   distribution.
+
+UAM is a derivative work that imports a selection of various sources from
+the Mesa 3-D graphics library. The default Mesa license is reproduced below:
+
+Copyright (C) 1999-2007  Brian Paul   All Rights Reserved.
+
+Permission is hereby granted, free of charge, to any person obtaining a
+copy of this software and associated documentation files (the "Software"),
+to deal in the Software without restriction, including without limitation
+the rights to use, copy, modify, merge, publish, distribute, sublicense,
+and/or sell copies of the Software, and to permit persons to whom the
+Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included
+in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL
+THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+For more precise licensing information, check out the header of each source
+code file in the mesa-imported/ directory, or visit this website:
+    https://www.mesa3d.org/license.html
+
+====================================================================================================================
+uam: SwitchWakerHD's patches (MPL-2.0)
+====================================================================================================================
+
+The changes to uam marked "SwitchWakerHD patch N" are subject to the terms of the Mozilla Public License, v. 2.0.
+A copy of the MPL is at https://mozilla.org/MPL/2.0/. Their source code is in app/thirdparty/uam of
+https://github.com/ChanseyIsTheBest/futari-nx.
+
+====================================================================================================================
+smol-v (MIT)
+====================================================================================================================
+
+ALTERNATIVE A - MIT License
+Copyright (c) 2016-2018 Aras Pranckevicius
+Permission is hereby granted, free of charge, to any person obtaining a copy of
+this software and associated documentation files (the "Software"), to deal in
+the Software without restriction, including without limitation the rights to
+use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies
+of the Software, and to permit persons to whom the Software is furnished to do
+so, subject to the following conditions:
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.

@@ -3,6 +3,7 @@ release/*.nro
 # made by test/release_node.mjs for local tests: made from the game, never committed
 release/*.mesp
 release/*.mesp.idx
+release/deko3d_glsl.bin
 *.zip
 node_modules/
 __pycache__/
