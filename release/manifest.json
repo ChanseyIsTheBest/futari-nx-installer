@@ -3,11 +3,11 @@
   "builds": [
     {
       "edition": "Xbox 360 disc (Mushihimesama Futari Ver 1.5)",
-      "version": "1.0.1",
+      "version": "1.0.2",
       "xex_sha256": "6e61934468463c8d023588a1e14b2269002dec6987b51538154843ea6869a434",
       "nro": "futari.nro",
-      "nro_sha256": "bd9338b6f0e80e5810c21f24f255bfcce661569377f95749443d6af44ad8d870",
-      "nro_size": 56559643,
+      "nro_sha256": "2b4e679edb74945f237d6b878bc2df90b98e807bada69d2dea42a7e96515d835",
+      "nro_size": 56563739,
       "game_files": 52,
       "game_bytes": 841393788,
       "shader_library": false,
